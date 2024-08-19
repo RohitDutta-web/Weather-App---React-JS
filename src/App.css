@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+body {
+  margin: 0px;
+  padding: 0px;
+  background-image: url(./assets/background.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+
+
+
+  font-family: 'Roboto Condensed';
+
+}
+
+.header {
+  text-align: center;
+  margin: 10px;
+  color: #f8f8f8;
+}
+
+.header input {
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  background-color: rgba(255, 253, 253, 0.5);
+  color: #ffffff;
+  box-shadow: rgba(255, 255, 255, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.5) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  ;
+  width: 30%;
+
+
+}
+
+::placeholder {
+  color: rgb(255, 255, 255);
+  opacity: 1;
+  font-weight: 300;
+  text-shadow: 1px 1px 1px #0000003c;
+  /* Firefox */
+}
+
+::-ms-input-placeholder {
+  /* Edge 12 -18 */
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  text-shadow: 1px 1px 1px #0000003a;
+}
+
+::-webkit-input-placeholder {
+  color: #f8f8f8;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px #0000004f;
+}
+
+
+.location-info {
+  color: #000000;
+  font-size: 40px;
+  margin-top: 10px;
+
+
+}
+
+.info {
+  display: flex;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.temp-info {
+  font-size: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icon img {
+  width: 20%;
+  position: absolute;
+  left: 40%;
+
+
+}
+
+.icon {
+  width: 60%;
+  height: 100px;
+  margin-bottom: 100px;
+
+}
+
+
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #0a0707;
+  background-color: white;
+  width: 60%;
+  height: 30%;
+  position: relative;
+  left: 20%;
+  right: 20%;
+  align-items: center;
+  margin: 20px;
+  border: none;
+  border-radius: 20px;
+  box-shadow: rgba(254, 254, 254, 0.5) 0px 22px 70px 4px;
+}
+
+.temp-detail {
+  display: flex;
+  color: white;
+  justify-content: space-around;
+  margin: 10px;
+  font-size: 20px;
+  font-weight: bold;
+
+
+}
+
+.other-detail {
+  display: flex;
+  color: white;
+  justify-content: space-around;
+  margin: 10px;
+  font-size: 20px;
+  font-weight: bold;
+
+}
+
+.feels-like {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+
+  width: 20%;
+  text-align: center;
+  padding: 10px;
+
+
+}
+
+.max-temp {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+
+  width: 20%;
+  text-align: center;
+
+  padding: 10px;
+
+}
+
+.min-temp {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+
+  width: 20%;
+  text-align: center;
+  padding: 10px;
+}
+
+.pressure {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+
+  width: 20%;
+  text-align: center;
+  padding: 10px;
+}
+
+.humidity {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+
+  width: 20%;
+  text-align: center;
+  padding: 10px;
+}
+
+.wind-info {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+
+  width: 20%;
+  text-align: center;
+  padding: 10px;
+
+}
+
+.search-location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header button img {
+  width: 40px;
+  position: relative;
+  top: 3px;
+  background-color: rgba(255, 255, 255, 0.589);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.search-location button {
+  position: relative;
+  top: 10px;
+  cursor: pointer;
+
+  border: none;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.0);
+}
