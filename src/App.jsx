@@ -16,6 +16,25 @@ function App() {
 
 
 
+  const handleIcon = () => {
+    if (data.weather[0].icon.includes('50')) {
+      setIcon(Mist);
+    } else if (data.weather[0].icon.includes('13')) {
+      setIcon(Snow);
+    } else if (data.weather[0].icon.includes('11')) {
+      setIcon(Thunderstorm);
+    } else if (data.weather[0].icon.includes('10')) {
+      setIcon(Drizzle);
+    } else if (data.weather[0].icon.includes('09')) {
+      setIcon(Rain);
+    } else if (data.weather[0].icon.includes('03') || data.weather[0].icon.includes('02')) {
+      setIcon(Clouds);
+    } else if (data.weather[0].icon.includes('01')) {
+      setIcon(Clear);
+    };
+  }
+
+
 
 
 
@@ -34,24 +53,10 @@ function App() {
 
     axios.get(url).then(response => {
       setData(response.data);
-
+      console.log(response.data);
     })
-    if (data.weather[0].icon.includes('50')) {
-      setIcon(Mist);
-    } else if (data.weather[0].icon.includes('13')) {
-      setIcon(Snow);
-    } else if (data.weather[0].icon.includes('11')) {
-      setIcon(Thunderstorm);
-    } else if (data.weather[0].icon.includes('10')) {
-      setIcon(Drizzle);
-    } else if (data.weather[0].icon.includes('09')) {
-      setIcon(Rain);
-    } else if (data.weather[0].icon.includes('03') || data.weather[0].icon.includes('02')) {
-      setIcon(Clouds);
-    } else if (data.weather[0].icon.includes('01')) {
-      setIcon(Clear);
-    };
     setLocation('');
+    handleIcon();
 
   }
 
