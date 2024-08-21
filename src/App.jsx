@@ -1,14 +1,10 @@
 import axios from "axios";
 import { useState } from "react";
-import Clouds from './assets/cloudy.gif'
+
 import './App.css'
 import search from './assets/search.png'
-import Clear from './assets/sunny.gif'
-import Rain from "./assets/rainny.gif"
-import Snow from "./assets/snowy.gif"
-import Mist from "./assets/foggy.gif"
-import Thunderstorm from "./assets/storm.gif"
-import Drizzle from "./assets/drizzle.gif"
+import acc from './assets/accelerometer-sensor.gif'
+
 
 
 
@@ -16,23 +12,6 @@ function App() {
 
 
 
-  const handleIcon = () => {
-    if (data.weather[0].icon.includes('50')) {
-      setIcon(Mist);
-    } else if (data.weather[0].icon.includes('13')) {
-      setIcon(Snow);
-    } else if (data.weather[0].icon.includes('11')) {
-      setIcon(Thunderstorm);
-    } else if (data.weather[0].icon.includes('10')) {
-      setIcon(Drizzle);
-    } else if (data.weather[0].icon.includes('09')) {
-      setIcon(Rain);
-    } else if (data.weather[0].icon.includes('03') || data.weather[0].icon.includes('02')) {
-      setIcon(Clouds);
-    } else if (data.weather[0].icon.includes('01')) {
-      setIcon(Clear);
-    };
-  }
 
 
 
@@ -46,7 +25,7 @@ function App() {
 
   const [location, setLocation] = useState('');
   const [data, setData] = useState({});
-  let [icon, setIcon] = useState(Clear);
+
 
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&APPID=252da01a1771493d21cee0a582817b96`;
   const searchLocation = () => {
@@ -56,7 +35,7 @@ function App() {
       console.log(response.data);
     })
     setLocation('');
-    handleIcon();
+
 
   }
 
@@ -110,7 +89,7 @@ function App() {
 
 
 
-          <div className="icon"><img src={icon} alt="Icon" /></div>
+          <div className="icon"><img src={acc} alt="Icon" /></div>
 
         </div>
 
