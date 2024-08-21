@@ -2,8 +2,8 @@ import axios from "axios";
 import { useState } from "react";
 
 import './App.css'
-import { search } from './assets/search.png'
-import { acc } from './assets/accelerometer-sensor.gif'
+import search  from './assets/search.png'
+import  acc  from './assets/accelerometer-sensor.gif'
 
 
 
