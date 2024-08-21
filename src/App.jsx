@@ -37,19 +37,26 @@ function App() {
       console.log(response.data);
     })
     setLocation('');
-    handleIcon();
-
-
-
+    if (data.weather[0].icon.includes('50')) {
+      setIcon(Mist);
+    } else if (data.weather[0].icon.includes('13')) {
+      setIcon(Snow);
+    } else if (data.weather[0].icon.includes('11')) {
+      setIcon(Thunderstorm);
+    } else if (data.weather[0].icon.includes('10')) {
+      setIcon(Drizzle);
+    } else if (data.weather[0].icon.includes('09')) {
+      setIcon(Rain);
+    } else if (data.weather[0].icon.includes('03') || data.weather[0].icon.includes('02')) {
+      setIcon(Clouds);
+    } else if (data.weather[0].icon.includes('01')) {
+      setIcon(Clear);
+    };
   }
 
 
 
-  const handleIcon = () => {
-    data.weather ? setIcon(data.weather[0].main) : icon;
 
-
-  }
 
 
 
@@ -74,7 +81,7 @@ function App() {
         <h1>Weather App</h1>
         <div className="search-location">
           <input type="text" value={location} onChange={handleLocation} placeholder="Enter Location" />
-          <button onClick={searchLocation} ><img src={search} alt="" /></button></div>
+          <button onClick={searchLocation}   ><img src={search} alt="" /></button></div>
       </div>
 
 
@@ -121,4 +128,5 @@ function App() {
   )
 }
 
-export default App
+
+export default App;
