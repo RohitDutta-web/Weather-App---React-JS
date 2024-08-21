@@ -34,9 +34,8 @@ function App() {
 
     axios.get(url).then(response => {
       setData(response.data);
-      console.log(response.data);
+
     })
-    setLocation('');
     if (data.weather[0].icon.includes('50')) {
       setIcon(Mist);
     } else if (data.weather[0].icon.includes('13')) {
@@ -52,6 +51,8 @@ function App() {
     } else if (data.weather[0].icon.includes('01')) {
       setIcon(Clear);
     };
+    setLocation('');
+
   }
 
 
